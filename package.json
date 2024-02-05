@@ -1,0 +1,22 @@
+{
+  "name": "electron_sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package:win": "electron-packager . SimpleCalculator --platform=win32 --arch=x64 --out=release-builds --overwrite",
+    "package:mac": "electron-packager . SimpleCalculator --platform=darwin --arch=x64 --out=release-builds --overwrite",
+    "package:linux": "electron-packager . SimpleCalculator --platform=linux --arch=x64 --out=release-builds --overwrite",
+    "package:win-arm": "electron-packager . SimpleCalculator --platform=win32 --arch=arm64 --out=release-builds --overwrite",
+    "package:mac-arm": "electron-packager . SimpleCalculator --platform=darwin --arch=arm64 --out=release-builds --overwrite",
+    "package:linux-arm": "electron-packager . SimpleCalculator --platform=linux --arch=arm64 --out=release-builds --overwrite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.2.1",
+    "electron-packager": "^17.1.2"
+  }
+}

@@ -1,0 +1,179 @@
+/* Light theme styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#calculator {
+    width: 320px;
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#display {
+    background-color: var(--display-background-color);
+    padding: 20px;
+    font-size: 32px;
+    text-align: right;
+    color: var(--display-text-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: var(--button-background-color);
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    color: var(--button-text-color);
+}
+
+button:hover {
+    background-color: var(--button-hover-background-color);
+    transform: translateY(-3px);
+}
+
+.operator {
+    color: #ff6d00;
+}
+
+#equals,
+#clear {
+    background-color: #ff6d00;
+    color: #fff;
+}
+
+#equals:hover,
+#clear:hover {
+    background-color: #ff4500;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Dark theme styles */
+body.dark-theme {
+    background-color: #222;
+    color: #fff;
+}
+
+#display.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+button.dark-theme {
+    background-color: #444;
+    color: #fff;
+}
+
+button.dark-theme:hover {
+    background-color: #666;
+}
+
+.operator.dark-theme {
+    color: #ff6d00;
+}
+
+#equals.dark-theme,
+#clear.dark-theme {
+    background-color: #ff6d00;
+    color: #fff;
+}
+
+#equals.dark-theme:hover,
+#clear.dark-theme:hover {
+    background-color: #ff4500;
+}
+/* Add this CSS to move the buttons */
+#back-to-welcome {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%; /* Make it a circle */
+    padding: 10px; /* Increase padding for circle appearance */
+}
+
+/* Add tooltip styles for the new buttons */
+#back-to-welcome.tooltip .tooltiptext,
+#theme-toggle.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#back-to-welcome.tooltip:hover .tooltiptext,
+#theme-toggle.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
